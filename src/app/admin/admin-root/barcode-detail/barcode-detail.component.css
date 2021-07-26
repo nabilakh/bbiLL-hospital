@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+.container{
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  height: 80vh;
+}
+
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  color: #5a5a5a;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 13rem;
+  border-radius: 5px;
+  background: #446b7a;
+}
+.container1 {
+  border: 3px solid rgb(126, 126, 126);
+  margin-top: 3rem;
+  width: 45%;
+  position: absolute;
+  left: 39%;
+  border-radius: 10px;
+}
+.container1 .ticket {
+  padding: 1rem;
+  text-align: center;
+}
+.container1 .ticket h3 {
+  color: #3d3d3d;
+  font-size: 2rem;
+}
+.container1 .ticket p {
+  color: #3a3a3a;
+  font-size: 1rem;
+}
+.container1 .ticket h6{
+  color: #383838;
+  font-size: 13px;
+}
+.container1 .ticket h5{
+  color: #4b4b4b;
+  font-size: 1rem;
+}
+.container1 .ticket h2{
+  color: #4b4b4b;
+  font-size: 6rem;
+}
+.container button {
+  float: right;
+  background: #446b7a;
+  border-radius: 10px;
+  color: #d6d6d6;
+  width: 6rem;
+  font-family: 'Poppins',sans-serif;
+  height: 2rem;
+  font-size: 1rem;
+}
+.container button:hover {
+  background: #d1d1d1;
+  color: #383838;
+}
+

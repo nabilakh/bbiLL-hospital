@@ -1,0 +1,101 @@
+ <div class="container">
+    <div class="title">FORM INPUT VISITOR</div>
+    <form class="content">
+      <form #visitorForm="ngForm" (ngSubmit)="visitorForm.valid && onSubmit(visitorForm)">
+        <div class="user-details">
+
+          <div class="input-box">
+            <span class="details">Queue Number</span>
+            <input type="text"  required placeholder="Enter Queue Number"
+            #queueNumber="ngModel" [(ngModel)]="visitorsService.selectedUser.queueNumber" name="fullName" [ngClass]="{'invalid-textbox' :visitorForm.submitted && !queueNumber.valid }">
+            <div *ngIf="visitorForm.submitted && !queueNumber.valid">
+              <label class="validation-message">This field is required.</label>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Visitor Full Name</span>
+            <input type="text" placeholder="Enter visitor name" required
+            #visitorName="ngModel" [(ngModel)]="visitorsService.selectedUser.visitorName" name="visitorName"
+            [ngClass]="{'invalid-textbox' :visitorForm.submitted && !visitorName.valid }">
+            <div *ngIf="visitorForm.submitted && !visitorName.valid">
+              <label class="validation-message">This field is required.</label>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter customer email" required
+            #email="ngModel" [(ngModel)]="visitorsService.selectedUser.email" name="email"
+            [ngClass]="{'invalid-textbox' :visitorForm.submitted && !email.valid }">
+            <div *ngIf="visitorForm.submitted && !email.valid">
+              <label class="validation-message">This field is required.</label>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" placeholder="Enter customer number" required
+            #phoneNumber="ngModel" [(ngModel)]="visitorsService.selectedUser.phoneNumber" name="phoneNumber"
+            [ngClass]="{'invalid-textbox' :visitorForm.submitted && !phoneNumber.valid }">
+            <div *ngIf="visitorForm.submitted && !phoneNumber.valid">
+              <label class="validation-message">This field is required.</label>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Address</span>
+            <input type="text" placeholder="Enter customer address" required
+            #Address="ngModel" [(ngModel)]="visitorsService.selectedUser.Address" name="Address"
+            [ngClass]="{'invalid-textbox' :visitorForm.submitted && !Address.valid }">
+            <div *ngIf="visitorForm.submitted && !Address.valid">
+              <label class="validation-message">This field is required.</label>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Patient Complaints</span>
+            <input type="text" placeholder="Enter Patient Complaints" required
+            #patientComplaints="ngModel" [(ngModel)]="visitorsService.selectedUser.patientComplaints" name="patientComplaints"
+            [ngClass]="{'invalid-textbox' :visitorForm.submitted && !patientComplaints.valid }">
+            <div *ngIf="visitorForm.submitted && !patientComplaints.valid">
+              <label class="validation-message">This field is required.</label>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <span class="details">The Doctor who will examine</span>
+            <input type="text" placeholder="Enter Doctor name" required
+            #doctorName="ngModel" [(ngModel)]="visitorsService.selectedUser.doctorName" name="doctorName"
+            [ngClass]="{'invalid-textbox' :visitorForm.submitted && !doctorName.valid }">
+            <div *ngIf="visitorForm.submitted && !doctorName.valid">
+              <label class="validation-message">This field is required.</label>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Patient Check-up Schedule</span>
+            <div class="date">
+              <input type="date" placeholder="Enter date" required
+              #scheduleDate="ngModel" [(ngModel)]="visitorsService.selectedUser.scheduleDate" name="scheduleDate"
+            [ngClass]="{'invalid-textbox' :visitorForm.submitted && !scheduleDate.valid }">
+            <div *ngIf="visitorForm.submitted && !scheduleDate.valid">
+              <label class="validation-message">This field is required.</label>
+            </div>
+            <input type="text" placeholder="Enter time" required
+            #scheduleTime="ngModel" [(ngModel)]="visitorsService.selectedUser.scheduleTime" name="scheduleTime"
+            [ngClass]="{'invalid-textbox' :visitorForm.submitted && !scheduleTime.valid }">
+            </div>
+            <div *ngIf="visitorForm.submitted && !scheduleTime.valid">
+              <label class="validation-message">This field is required.</label>
+            </div>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="SUBMIT">
+        </div>
+      </form>
+    </form>
+  </div>
+
+

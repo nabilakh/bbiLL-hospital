@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <nav class="sidebar">
+    <img src="../../../assets/image/avatar.svg" alt="avatar">
+      <h2>BbiLL Hospital</h2>
+      <ul>
+          <li><a [routerLink]="'/admin/home'" routerLinkActive="active"><i class="icon fas fa-home"></i>HOME</a></li>
+          <li><a [routerLink]="'/admin/form-input-visitors'" routerLinkActive="active"><i class=" icon fas fa-hospital-user"></i>INPUT VISITOR</a></li>
+          <li><a [routerLink]="'/admin/visitors-list'" routerLinkActive="active"><i class=" icon fas fa-clipboard-list"></i>VISITOR LIST</a></li>
+          <li><a [routerLink]="'/admin/barcode'" routerLinkActive="active"><i class=" icon fa fa-ticket"></i>BARCODE</a></li>
+      </ul>
+      <div class="sign-out">
+        <li><a [routerLink]="'/auth/login'" routerLinkActive="active"><i class="fas fas fa-sign-out-alt"></i>SIGN OUT</a></li>
+    </div>
+  </nav>
+  <div class="main_content">
+      <div class="header">Customer Queue Management<i class=" icon fas fa-hospital"></i></div>
+      <router-outlet></router-outlet>
+  </div>
+</div>
